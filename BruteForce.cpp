@@ -11,6 +11,6 @@ int BruteForce::getNumberOfIteration(){
 	return numberOfIteration;
 }
 
-int BruteForce::getIterationTime(){
+double BruteForce::getIterationTime(){
 	return iterationTime;
 }

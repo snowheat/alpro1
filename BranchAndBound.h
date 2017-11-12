@@ -6,7 +6,7 @@ class BranchAndBound
 private:
 	int n;
 	int numberOfIteration;
-	int iterationTime;
+	double iterationTime;
 public:
 	BranchAndBound(int nFromInput);
 	int getNumberOfIteration();

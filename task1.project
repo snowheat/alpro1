@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="task1" Version="10.0.0" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
   <Description/>
   <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+    <File Name="Backtracking.cpp"/>
+    <File Name="Backtracking.h"/>
+    <File Name="BFS.cpp"/>
+    <File Name="BFS.h"/>
+    <File Name="BranchAndBound.cpp"/>
+    <File Name="BranchAndBound.h"/>
+    <File Name="BruteForce.cpp"/>
+    <File Name="BruteForce.h"/>
+    <File Name="DFS.cpp"/>
+    <File Name="DFS.h"/>
+    <File Name="Greedy.cpp"/>
+    <File Name="Greedy.h"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
   <Settings Type="Executable">
     <GlobalSettings>
-      <Compiler Options="" C_Options="" Assembler="">
+      <Compiler Options="-std=c++11" C_Options="" Assembler="">
         <IncludePath Value="."/>
       </Compiler>
       <Linker Options="">
@@ -12,7 +34,7 @@
       </Linker>
       <ResourceCompiler Options=""/>
     </GlobalSettings>
-    <Configuration Name="Debug" CompilerType="MinGW ( Code::Blocks )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+    <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-64 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
       </Compiler>
@@ -92,21 +114,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <File Name="Backtracking.cpp"/>
-    <File Name="Backtracking.h"/>
-    <File Name="BFS.cpp"/>
-    <File Name="BFS.h"/>
-    <File Name="BranchAndBound.cpp"/>
-    <File Name="BranchAndBound.h"/>
-    <File Name="BruteForce.cpp"/>
-    <File Name="BruteForce.h"/>
-    <File Name="DFS.cpp"/>
-    <File Name="DFS.h"/>
-    <File Name="Greedy.cpp"/>
-    <File Name="Greedy.h"/>
-  </VirtualDirectory>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
 </CodeLite_Project>

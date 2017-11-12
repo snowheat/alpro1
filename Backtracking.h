@@ -6,11 +6,11 @@ class Backtracking
 private:
 	int n;
 	int numberOfIteration;
-	int iterationTime;
+	double iterationTime;
 public:
 	Backtracking(int nFromInput);
 	int getNumberOfIteration();
-	int getIterationTime();
+	double getIterationTime();
 };
 
 #endif // BACKTRACKING_H

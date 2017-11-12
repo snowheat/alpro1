@@ -1,7 +1,9 @@
 #include "Greedy.h"
 #include <iostream>
-#include <string.h>
+#include <string>
+#include <cstring>
 #include <time.h>
+#include <chrono>
 
 using namespace std;
 
@@ -34,6 +36,7 @@ Greedy::Greedy(int nParam) {
     int state = -1;
     string binaryFormat;
     clock_t tStart = clock();
+	auto start = std::chrono::high_resolution_clock::now();
 
     while(state != 0) {
         binaryFormat = getBinary(numberOfIteration + 1);
@@ -41,7 +44,10 @@ Greedy::Greedy(int nParam) {
         numberOfIteration++;
     }
 
-    iterationTime = (double)(clock() - tStart) ;
+	auto finish = std::chrono::high_resolution_clock::now();
+    //iterationTime = (double)(clock() - tStart)/CLOCKS_PER_SEC ;
+	iterationTime = std::chrono::duration_cast<std::chrono::microseconds>(finish-start).count();
+	
     cout << "Binary Format :" << binaryFormat << endl;
 }
 

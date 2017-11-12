@@ -6,7 +6,7 @@ class BFS
 private:
 	int n;
 	int numberOfIteration;
-	int iterationTime;
+	double iterationTime;
 public:
 	BFS(int nFromInput);
 	int getNumberOfIteration();

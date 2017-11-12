@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <limits>
 #include <time.h>
+#include <chrono>
 
 using namespace std;
 
@@ -16,6 +17,8 @@ DFS::DFS(int nParam)
     numberOfIteration = 0;
     iterationTime = 0;
     clock_t tStart = clock();
+	auto start = std::chrono::high_resolution_clock::now();
+	
     stack<long long> s;
     s.push(1);
 
@@ -46,8 +49,10 @@ DFS::DFS(int nParam)
             }
         }
     }
-
-    iterationTime = (double)(clock() - tStart) ;
+	
+	auto finish = std::chrono::high_resolution_clock::now();
+    //iterationTime = (double)(clock() - tStart)/CLOCKS_PER_SEC ;
+	iterationTime = std::chrono::duration_cast<std::chrono::microseconds>(finish-start).count();
 }
 
 int DFS::getNumberOfIteration()
@@ -55,7 +60,7 @@ int DFS::getNumberOfIteration()
     return numberOfIteration;
 }
 
-int DFS::getIterationTime()
+double DFS::getIterationTime()
 {
     return iterationTime;
 }

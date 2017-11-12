@@ -68,5 +68,7 @@ int main()
 	cout << "Waktu iterasi : " << backtracking.getIterationTime() << endl;
 	cout << "--------------------------------------" << endl;
 	
+	main();
+	
 	return 0;
 }

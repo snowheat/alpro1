@@ -5,6 +5,8 @@
 #include <vector>
 #include <algorithm>
 #include <limits>
+#include <ctime>
+#include <chrono>
 
 using namespace std;
 
@@ -15,6 +17,8 @@ Backtracking::Backtracking(int nParam)
     numberOfIteration = 0;
     iterationTime = 0;
     clock_t tStart = clock();
+	auto start = std::chrono::high_resolution_clock::now();
+	
     stack<long long> ss;
     vector<int> stateStatus = vector<int>(nParam, 0);
     vector<long long> stateValue = vector<long long>(nParam, 0);
@@ -65,8 +69,10 @@ Backtracking::Backtracking(int nParam)
 //            }
         }
     }
-
-    iterationTime = (double)(clock() - tStart) ;
+	
+	auto finish = std::chrono::high_resolution_clock::now();
+    //iterationTime = (double)(clock() - tStart)/CLOCKS_PER_SEC ;
+	iterationTime = std::chrono::duration_cast<std::chrono::microseconds>(finish-start).count();
 }
 
 int Backtracking::getNumberOfIteration()
@@ -74,7 +80,7 @@ int Backtracking::getNumberOfIteration()
     return numberOfIteration;
 }
 
-int Backtracking::getIterationTime()
+double Backtracking::getIterationTime()
 {
     return iterationTime;
 }

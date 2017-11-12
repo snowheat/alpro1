@@ -6,11 +6,11 @@ class BruteForce
 private:
 	int n;
 	int numberOfIteration;
-	int iterationTime;
+	double iterationTime;
 public:
 	BruteForce(int nFromInput);
 	int getNumberOfIteration();
-	int getIterationTime();
+	double getIterationTime();
 };
 
 #endif // BRUTEFORCE_H

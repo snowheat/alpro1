@@ -6,11 +6,11 @@ class DFS
 private:
 	int n;
 	int numberOfIteration;
-	int iterationTime;
+	double iterationTime;
 public:
 	DFS(int nFromInput);
 	int getNumberOfIteration();
-	int getIterationTime();
+	double getIterationTime();
 };
 
 #endif // DFS_H

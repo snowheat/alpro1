@@ -6,11 +6,11 @@ class Greedy
 private:
 	int n;
 	int numberOfIteration;
-	int iterationTime;
+	double iterationTime;
 public:
 	Greedy(int nFromInput);
 	int getNumberOfIteration();
-	int getIterationTime();
+	double getIterationTime();
 };
 
 #endif // GREEDY_H
